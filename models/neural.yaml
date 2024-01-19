@@ -1,0 +1,18 @@
+name: neural-chat
+context_size: 2048
+f16: true
+mmap: true
+trimsuffix: 
+- "\n"
+parameters:
+  model: neural-chat-7b-v3-1.Q6_K.gguf
+  temperature: 0.2
+  top_k: 40
+  top_p: 0.95
+template:
+  chat_message: chatml
+  chat: chatml-block
+  completion: completion
+stopwords:
+  - <|im_end|>
+threads: 16
